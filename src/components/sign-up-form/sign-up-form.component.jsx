@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 
 const defaultFormFields = {
   displayName: "",
@@ -15,21 +15,21 @@ const SignUpForm = () => {
 
   console.log(formFields);
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  //   if (password !== confirmPassword) {
-  //     alert("password do not match..");
-  //     return;
-  //   }
+    //   if (password !== confirmPassword) {
+    //     alert("password do not match..");
+    //     return;
+    //   }
 
-  //   try {
-  //     const response = createAuthUserWithEmailAndPassword(email, password);
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.log("user error..", error);
-  //   }
-  // };
+    //   try {
+    //     const response = createAuthUserWithEmailAndPassword(email, password);
+    //     console.log(response);
+    //   } catch (error) {
+    //     console.log("user error..", error);
+    //   }
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
